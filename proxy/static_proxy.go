@@ -1,6 +1,6 @@
 package proxy
 
-type UserImpl interface {
+type UserInterface interface {
 	Login(mobileNumber, password string) error
 }
 
