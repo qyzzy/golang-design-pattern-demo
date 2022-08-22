@@ -17,8 +17,8 @@ func sub2(msg1, msg2 string) {
 
 func TestAsyncEventBus_Publish(t *testing.T) {
 	bus := NewAsyncEventBus()
-	bus.Subscribe("topic:1", sub1)
-	bus.Subscribe("topic:1", sub2)
+	_ = bus.Subscribe("topic:1", sub1)
+	_ = bus.Subscribe("topic:1", sub2)
 	bus.Publish("topic:1", "test1", "test2")
 	bus.Publish("topic:1", "testA", "testB")
 	time.Sleep(1 * time.Second)
