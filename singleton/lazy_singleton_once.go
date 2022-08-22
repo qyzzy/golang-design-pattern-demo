@@ -7,7 +7,7 @@ type LazySingletonOnce struct {
 
 var (
 	lazySingletonOnce *LazySingletonOnce
-	once              *sync.Once
+	once              = &sync.Once{}
 )
 
 func (singleton *LazySingletonOnce) GetInstance() *LazySingletonOnce {
